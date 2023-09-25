@@ -22,7 +22,7 @@ Each directory further categorizes snippets based on the specific blockchain or 
 1. **Clone the Repository**
 
    ```sh
-   git clone https://github.com/your-username/web3-snippets.git
+   git clone https://github.com/hajbabaeim/web3-snippets.git
    ```
 
 2. **Navigate to the Desired Snippet**
