@@ -5,14 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"math/big"
 	"net/http"
+	"os"
 	"strings"
-)
 
-const (
-	nodeURL         = "https://mainnet.infura.io/v3/7e0bbeb6403249c48334f9affe1f5fff"
-	receiverAddress = "0xF64A6f7583f631Af19A361Cf210D1160f2dc589d"
+	"github.com/joho/godotenv"
 )
 
 type rpcRequest struct {
@@ -46,6 +45,13 @@ type Transaction struct {
 }
 
 func main() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+	infuraKey := os.Getenv("INFURA_KEY")
+	nodeURL := fmt.Sprintf("https://mainnet.infura.io/v3/%s", infuraKey)
+	receiverAddress := os.Getenv("RECEIVER_ADDRESS")
 	fromBlockNumber := 18204230
 	toBlockNumber := 18204232
 
