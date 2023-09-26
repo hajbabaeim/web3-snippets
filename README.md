@@ -28,16 +28,14 @@ Each directory further categorizes snippets based on the specific blockchain or 
 2. **Navigate to the Desired Snippet**
 
    ```sh
-   cd evm-snippets/ethereum
+   cd cmd/{non-}evm-snippets/snippet-name/main.go
    ```
 
 3. **Run the Snippet**
 
    ```sh
-   go run snippet-name.go
+   go run main.go
    ```
-
-   Replace snippet-name.go with the actual name of the snippet file you wish to run.
 
 ## 🌟 Contributing
 

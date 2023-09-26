@@ -46,28 +46,6 @@ type Transaction struct {
 }
 
 func main() {
-	// fromBlock := "0x12A05F200" // Hexadecimal representation of the block number
-	// toBlock := "0x12A05F2FF"   // Hexadecimal representation of the block number
-
-	// for i, _ := range fromBlock {
-	// 	if fromBlock[i] != toBlock[i] {
-	// 		fromBlock = fromBlock[:i+1]
-	// 		break
-	// 	}
-	// }
-
-	// blockNumber, err := hexToInt(fromBlock)
-	// if err != nil {
-	// 	fmt.Println("Error:", err)
-	// 	return
-	// }
-
-	// toBlockNumber, err := hexToInt(toBlock)
-	// if err != nil {
-	// 	fmt.Println("Error:", err)
-	// 	return
-	// }
-
 	fromBlockNumber := 18204230
 	toBlockNumber := 18204232
 
@@ -151,7 +129,3 @@ func hexToBigInt(hex string) (*big.Int, error) {
 func intToHex(n int) string {
 	return fmt.Sprintf("0x%X", n)
 }
-
-// func intToHex(n int) string {
-// 	return "0x" + strconv.FormatInt(int64(n), 16)
-// }
